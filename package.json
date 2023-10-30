@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/mjtorrest01/Festival_Musica#readme",
   "devDependencies": {
+    "gulp": "^4.0.2",
     "sass": "^1.69.5"
   }
 }
