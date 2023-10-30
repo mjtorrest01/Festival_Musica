@@ -4,7 +4,8 @@
   "description": "Proyecto con Gulp, SASS Y HTML",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch src/SCSS:build/css"
+    "sass": "sass --watch src/SCSS:build/css",
+    "dev": "gulp dev"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
   "homepage": "https://github.com/mjtorrest01/Festival_Musica#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
     "sass": "^1.69.5"
   }
 }
