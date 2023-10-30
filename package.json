@@ -4,7 +4,7 @@
   "description": "Proyecto con Gulp, SASS Y HTML",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass": "sass --watch src/SCSS:build/css"
   },
   "repository": {
     "type": "git",
