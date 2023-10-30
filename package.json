@@ -1,0 +1,24 @@
+{
+  "name": "festival_musica",
+  "version": "1.0.0",
+  "description": "Proyecto con Gulp, SASS Y HTML",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjtorrest01/Festival_Musica.git"
+  },
+  "keywords": [
+    "SASS",
+    "GULP",
+    "HTML"
+  ],
+  "author": "Michael-mjtorrest",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mjtorrest01/Festival_Musica/issues"
+  },
+  "homepage": "https://github.com/mjtorrest01/Festival_Musica#readme"
+}
