@@ -5,6 +5,8 @@ const sass = require('gulp-sass')(require('sass'));
 const plumber = require('gulp-plumber');
 
 // Imagenes Webp
+const cache = require('gulp-cache');
+const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
 
 function css(done){
@@ -14,6 +16,16 @@ function css(done){
         .pipe(dest("build/css")) // Guarda el archivo compilado en CSS
 
     done(); //Callback que avisa a gulp cuando llegamos al final
+}
+
+function imagenes(done){
+    const opciones = {
+        optimizationLevel: 3
+    };
+    src("src/img/**/*.{png,jpg}")
+        .pipe( cache( imagemin(opciones) ) )
+        .pipe(dest("build/img"))
+    done();
 }
 
 function versionWebp(done){
@@ -35,5 +47,6 @@ function dev(done){
 }
 
 exports.css = css; // Mandamos  a llamar la funcion CSS
+exports.imagenes = imagenes;
 exports.versionWebp = versionWebp; // Mandamos  a llamar la funcion versionWebp
-exports.dev = parallel( versionWebp, dev ); // Mandamos  a llamar la funcion versionWebp y dev en paralelo 
+exports.dev = parallel( imagenes, versionWebp, dev ); // Mandamos  a llamar la funcion versionWebp y dev en paralelo 
