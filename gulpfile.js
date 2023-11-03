@@ -53,14 +53,22 @@ function versionAvif(done){
     done();
 }
 
+function javascript(done){
+    src('src/js/**/*.js')
+        .pipe( dest("build/js") );
+    done();
+}
+
 function dev(done){
     watch("src/scss/**/*.scss", css);
+    watch("src/js/**/*.js", javascript);
 
     done();
 }
 
 exports.css = css; // Mandamos  a llamar la funcion CSS
+exports.js = javascript; // Mandamos  a llamar la funcion javascript
 exports.imagenes = imagenes;
 exports.versionWebp = versionWebp; // Mandamos  a llamar la funcion versionWebp
 exports.versionAvif = versionAvif;
-exports.dev = parallel( imagenes, versionWebp, versionAvif, dev ); // Mandamos  a llamar la funcion versionWebp y dev en paralelo 
+exports.dev = parallel( imagenes, versionWebp, versionAvif, javascript, dev ); // Mandamos  a llamar la funcion versionWebp y dev en paralelo 
