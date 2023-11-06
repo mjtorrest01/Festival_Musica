@@ -429,6 +429,9 @@ body.fijar-body {
   overflow: hidden;
   padding-right: 1.5rem;
 }
+body.body-scroll {
+  padding-top: 8.6rem;
+}
 
 p {
   font-size: 2rem;
@@ -471,6 +474,15 @@ img {
 
 .header {
   background-color: #4CB8B3;
+}
+@media (min-width: 768px) {
+  .header.fijo {
+    left: 0;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0.1rem 0.2rem 0.3rem #333;
+  }
 }
 .header h1 {
   color: #FFFFFF;
